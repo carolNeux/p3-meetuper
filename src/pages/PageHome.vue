@@ -7,9 +7,9 @@
         <h1 class="title is-inline">Featured Meetups in "Location"</h1>
         <AppDropdown />
         <button class="button is-primary is-pulled-right m-r-sm">Create Meetups</button>
-        <router-link :to="{name:'PageMeetupFind'}" 
+        <router-link :to="{name: 'PageMeetupFind'}"
                      class="button is-primary is-pulled-right m-r-sm">
-                     All
+                   All
         </router-link>
       </div>
       <div class="row columns is-multiline">
@@ -42,21 +42,17 @@
       CategoryItem,
       MeetupItem
     },
-    data () {
-      return {
-        meetups: [],
-        categories: []
+    computed: {
+      meetups () {
+        return this.$store.getters['meetups']
+      },
+      categories () {
+        return this.$store.getters['categories']
       }
     },
     created () {
-      axios.get('/api/v1/meetups')
-        .then(res => {
-          this.meetups = res.data
-        })
-      axios.get('/api/v1/categories')
-        .then(res => {
-          this.categories = res.data
-        })
+      this.$store.dispatch('fetchMeetups')
+      this.$store.dispatch('fetchCategories')
     }
   }
 </script>
