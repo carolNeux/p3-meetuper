@@ -3,9 +3,19 @@ import Vuex from 'vuex'
 
 import axios from 'axios'
 
+import meetups    from './modules/meetups'
+import categories from './modules/categories'
+import threads    from './modules/threads'
+
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+  modules:{
+    meetups,
+    categories,
+    threads
+  },
+
   // In state we are keeping our data we are sharing with our components
   state: {
     meetups: [],
