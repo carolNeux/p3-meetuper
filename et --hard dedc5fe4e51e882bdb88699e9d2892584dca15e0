@@ -1,0 +1,19 @@
+[33md377ce7[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m  Agregamos un spinner mientras se carga la pagina
+[33mdedc5fe[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m vuex, modules, lesson132'
+[33mbd23103[m  introduccion a modules, creamos una carpeta dentro del store y 3 archivos .js
+[33m9e4ad4e[m mapping functions , mapAction, mapState
+[33m5ef4c41[m creamos setItem en store/index.js
+[33mea17584[m Using store for threads and meetupById
+[33mccd6f72[m Comenzamos a usar Vuex
+[33m7774edc[m Page not found and error View
+[33mef8311d[m hicimos la find page con su ruta
+[33ma0a4db4[m Actualizamos la pagina de PageMeetup Detail, en firefox se ve bien en google no se ve bien, lesso 122
+[33m38ff302[m  fetching meetup data
+[33m948bff0[m armamos la navegacion a PageMeetupDetail, trayendo el id con params
+[33m3135ebe[m Agregamos el Router, creamos rutas para PageHome y para mmetups lo generamos x id
+[33maab900b[m Creamos un nuevo componente MeetupItem, lo iteramos, e hicimos un nuevo filtro para la fecha, leccion 118
+[33mc13ccd6[m Creamos el componente CategoryItem.vue  e iteramos las categorias en PageHome, lesson 117
+[33me4ea582[m  Conected to Mongo DB
+[33m501512e[m Base Setup Fixes
+[33m866aacb[m Base Setup of Course Application
+[33m0b23aed[m init
