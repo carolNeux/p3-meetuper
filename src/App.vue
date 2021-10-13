@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <TheNavbar />
-    <!-- <PageHome />  lo reemplazamos por router-view-->
-    <router-view />
-    <PageMeetupDetail />
+    <div class="page-wrapper">
+      <router-view />
+    </div>
     <TheFooter />
   </div>
 </template>
