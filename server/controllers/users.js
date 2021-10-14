@@ -13,6 +13,35 @@ exports.getUsers = function(req, res) {
 }
 
 exports.register = function(req, res) {
-  console.log('Hello from register route !!!')
-  return res.json ({status: 'OK'})
+ const registerData = req.body
+
+ if (!registerData.email) {
+  return res.status(422).json({
+    errors: { 
+      email: 'is required',
+    }
+  })
+ }
+ if (!registerData.password) {
+  return res.status(422).json({
+    errors: { 
+      password: 'is required',
+    }
+  })
+ }
+ if (registerData.passwordConfirmation !== registerData.passwordConfirmation) {
+  return res.status(422).json({
+    errors: { 
+      password: 'is not the same as confirmation password',
+    }
+  })
+ }
+
+ const user = new User(registerData)
+  return user.save((errors, saveUser) => {
+    if (errors){ 
+      return res.status(422).json ({errors})
+    }
+    return res.json (saveUser)
+ })
 }
