@@ -5,10 +5,10 @@ export default {
   },
   actions: {
     loginWithEmailAndPassword (context, userData) {
-      console.log(userData)
+      return(userData)
     },
     registerUser (context, userData) {
-      console.log(userData)
+    return(userData)
     }
   }
 }

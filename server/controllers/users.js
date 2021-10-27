@@ -79,7 +79,6 @@ exports.login = function (req, res, next) {
     if (passportUser) {
       req.login(passportUser, function (err) {
         if (err) { next(err); }
-
         return res.json(passportUser)
       });
 
@@ -90,4 +89,9 @@ exports.login = function (req, res, next) {
     }
 
   })(req, res, next)
+}
+
+exports.logout = function (req, res, next) {
+  req.logout()
+  return res.json('Session destroyed!')
 }
